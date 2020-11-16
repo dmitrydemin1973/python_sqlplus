@@ -8,6 +8,8 @@ NLS_DATE_FORMAT = "\'DD.MM.YYYY HH24:MI:SS\'"
 NLS_NUMERIC_CHARACTERS = "\'.,\'"
 AUTO_COMMIT = "OFF"
 NLS_LANG = 'AMERICAN_AMERICA.CL8MSWIN1251'
+# silent sqlplus = "-s"  silent off sqlplus = ""
+silent_sqlplus = ""
 
 Sqlheader = """
 set autocommit """ + AUTO_COMMIT + "\n" + """set define off
@@ -81,7 +83,7 @@ logging.info("Set NLS_NUMERIC_CHARACTERS=" + NLS_NUMERIC_CHARACTERS)
 connectoracle = str(username) + "/" + str(password) + '@' + str(connectstring)
 
 logging.info("Connect ro oracle:" + connectoracle)
-sqlplus_result = subprocess.run([r'sqlplus.exe', '-s', connectoracle], env=my_env,
+sqlplus_result = subprocess.run([r'sqlplus.exe', silent_sqlplus, connectoracle], env=my_env,
                                 stderr=subprocess.PIPE, stdout=subprocess.PIPE, text=True, input=SqlQueryALL)
 
 #print(sqlplus_result.stdout)
