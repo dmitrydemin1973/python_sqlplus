@@ -90,8 +90,6 @@ logging.info("Connect ro oracle:" + connectoracle)
 sqlplus_result = subprocess.run([r'sqlplus.exe', silent_sqlplus, connectoracle], env=my_env,
                                 stderr=subprocess.PIPE, stdout=subprocess.PIPE, text=True, input=SqlQueryALL)
 
-#print(sqlplus_result.stdout)
-#print(sqlplus_result.returncode)
 
 logging.info(sqlplus_result.stdout)
 
