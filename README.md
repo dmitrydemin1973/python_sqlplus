@@ -3,24 +3,17 @@
 The utility run_all_sql_dir.py executes all sql files from the specified directory and creates one log files.
 in the script you can configure NLS variables:
 
-NLS_DATE_FORMAT = "\'DD.MM.YYYY HH24:MI:SS\'"
-NLS_NUMERIC_CHARACTERS = "\'.,\'"
-NLS_LANG = 'AMERICAN_AMERICA.CL8MSWIN1251'
+    NLS_DATE_FORMAT = "\'DD.MM.YYYY HH24:MI:SS\'"
+    NLS_NUMERIC_CHARACTERS = "\'.,\'"
+    NLS_LANG = 'AMERICAN_AMERICA.CL8MSWIN1251'
 
-, autocommit, 
+, autocommit,
 
-AUTO_COMMIT = "OFF"
+    AUTO_COMMIT = "OFF"
 
 stop the script on error or continue execution
 
-WHENEVER = 'WHENEVER SQLERROR EXIT SQL.SQLCODE'.
-
-
-NLS_LANG=" + NLS_LANG)
-logging.info("Set NLS_DATE_FORMAT=" + NLS_DATE_FORMAT )
-logging.info("Set NLS_NUMERIC_CHARACTERS=" + NLS_NUMERIC_CHARACTERS)
-
-et AUTO_COMMIT="+AUTO_COMMIT)
+    WHENEVER = 'WHENEVER SQLERROR EXIT SQL.SQLCODE'.
 
 
 -u Specify the username for example SCOTT
