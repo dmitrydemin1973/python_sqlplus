@@ -1,7 +1,7 @@
 # python_sqlplus
 
 The utility run_all_sql_dir.py executes all sql files from the specified directory and creates one log files.
-in the script you can configure NLS variables:
+In the script you can configure NLS variables:
 
     NLS_DATE_FORMAT = "\'DD.MM.YYYY HH24:MI:SS\'"
     NLS_NUMERIC_CHARACTERS = "\'.,\'"
